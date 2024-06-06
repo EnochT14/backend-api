@@ -13,6 +13,8 @@ const users_1 = __importDefault(require("./controllers/users"));
 const rateLimiter_1 = __importDefault(require("./middlewares/rateLimiter.js"));
 const candles_1 = __importDefault(require("./stock/candles"));
 const search_1 = __importDefault(require("./stock/search"));
+const peers_1 = __importDefault(require("./stock/peers"));
+const portfolio_1 = __importDefault(require("./stock/portfolio"));
 dotenv_1.default.config();
 (0, connectMongoDB_1.default)();
 const app = (0, express_1.default)();
@@ -28,6 +30,8 @@ app.use("/api/users/:uid", users_1.default);
 //stock routes
 app.use('/api/stock', search_1.default);
 app.use('/api/stock', candles_1.default);
+app.use('/api/stock', peers_1.default);
+app.use('/api/stock', portfolio_1.default);
 
 app.get("/", (req, res) => {
     res.send("Verge Money - Backend API");
