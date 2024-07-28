@@ -17,8 +17,8 @@ module.exports = redisClient;
 const { Redis } = require('@upstash/redis');
 
 const redisClient = new Redis({
-  url: 'https://fine-raven-50771.upstash.io',
-  token: 'AcZTASQgZDFkNzlmNTgtYjNjYi00ODg3LWJkOTctYjAyY2ZkOTE5ODFmMzY3ODVhZjQxYzRjNGI2YWJkNmFlNzcxM2QxYTM3NTk=',
+  url: 'https://fein.upstash.io',
+  token: 'AcZDFkNzYOURTOKENQxYTM3NTk=',
 });
 
 
